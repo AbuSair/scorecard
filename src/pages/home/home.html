@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title >Home Page</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+  <p style="font-weight: bold; font-size: 20px; color: grey; padding-left: 10px">
+      Login down here:</p>
+  <ion-card>
+    
+    <ion-card-content style="padding: 1px 1px 1px 20px">
+        
+      <ion-list>
+          <ion-item item-height="10px">
+            <ion-label floating>Username</ion-label>
+            <ion-input type="text" value="" aria-placeholder="hhhhh"></ion-input>
+          </ion-item>
+        
+          <ion-item padding="0">
+            <ion-label floating>Password</ion-label>
+            <ion-input type="password" [(ngModel)]="password1"></ion-input>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label floating>Confirm Password</ion-label>
+            <ion-input type="password" [(ngModel)]="confirmPass"></ion-input>
+          </ion-item>
+        
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <button ion-button (click)="confirmation()">Log in</button>
+  
+  <ion-card>
+    <ion-card-header>
+     {{ resultConfirm }}
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header style="font-style: italic; font-size: 14px " color="tomato">
+       Forgot Password? Press <a>here</a> to reset
+    </ion-card-header>
+  </ion-card>
+    
+</ion-content>

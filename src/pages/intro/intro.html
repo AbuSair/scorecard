@@ -1,0 +1,47 @@
+<ion-header>
+    <p>Log in to check your rank among your friends:</p>
+</ion-header>
+
+<ion-content padding class="myview">
+
+    <ion-card class="transparency">    
+        <ion-card-content class="transparency" style="padding: 1px 1px 1px 20px">
+          <ion-list class="transparency">
+
+              <ion-item class="transparency">
+                <ion-input class="transparency" placeholder="Username" type="text" value="" ></ion-input>
+              </ion-item>  
+
+              <ion-item class="transparency">
+                <ion-input class="transparency" placeholder="Password" type="password" [(ngModel)]="password1"></ion-input>
+              </ion-item>
+
+              <ion-item class="transparency">
+                <ion-input class="transparency" placeholder="Confirm Password" type="password" [(ngModel)]="confirmPass"></ion-input>
+              </ion-item> 
+
+          </ion-list>
+
+         <div>
+              <button class="loginButton" ion-button (click)="confirmation()">Log in</button>
+              <button class="loginButton" ion-button (click)="confirmation()">Register</button>
+         </div> 
+          
+        </ion-card-content>
+      </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <p>hello</p>
+     {{ resultConfirm }}
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card >
+    <ion-card-header style="font-style: italic; font-size: 14px " color="tomato">
+       Forgot Password? Press <a>here</a> to reset?!
+    </ion-card-header>
+  </ion-card>
+
+</ion-content>
+
